@@ -1,0 +1,106 @@
+/* RESET */
+* {
+  margin: 0;
+    padding: 0;
+      box-sizing: border-box;
+      }
+
+
+
+      /* IMPORT CUSTOM FONTS */
+      @font-face {
+        font-family: 'Source Sans Pro';
+          src: url('fonts/SourceSansPro-Regular.ttf') format('truetype');
+          }
+
+          @font-face {
+            font-family: 'Spin Cycle OT';
+              src: url('fonts/SpinCycleOT-Regular.otf') format('opentype');
+              }
+
+
+
+
+              /* CSS VARIABLES */
+      :root {
+        --primary-color: #FF6565;        
+          /* For links, buttons, accents */
+
+          --text-color: #222222;            
+           /* Main text color */
+
+            --font-main: 'Source Sans Pro', sans-serif;
+            /* Main font family */
+             
+              --max-width: 1000px;             
+                /* Max width for container */
+              }
+
+              .hero {
+                  width: 100%;
+                    min-height: 100vh; 
+                    /* full viewport height */
+
+                      background: url('images/your-background.jpg') center/cover no-repeat;
+                      /* BACKGROUND IMAGE HAS NOT BEEN ADDED*/
+
+                        display: flex;
+                          flex-direction: column;
+                          }
+
+
+
+                          .container {
+                              max-width: var(--max-width);        /* limits width */
+                                margin: 0 auto;                     /* centers container horizontally */
+                                  padding: 20px;                      /* space inside container */
+                                    display: flex;                      
+                                      flex-direction: column;             /* stacks nav + hero content vertically */
+                                        justify-content: space-between;     /* spreads nav and hero content */
+                                          flex: 1;                             /* fills hero height */
+                                          }
+
+
+                                          .nav {
+                                              display: flex;                  /* arranges children (logo + nav-links) in a row */
+                                                justify-content: space-between; /* logo left, links right */
+                                                  align-items: center;            /* vertically centers logo and links */
+                                                  }
+
+                                                  .nav-links {
+                                                    list-style: none;               /* removes bullet points from ul */
+                                                      display: flex;                  /* arranges li items horizontally */
+                                                        gap: 20px;                      /* space between each link */
+                                                        }
+
+                                                        .nav-links li a {
+                                                          text-decoration: none;          /* removes underline from links */
+                                                            color: var(--text-color);       /* main text color */
+                                                              font-family: var(--font-main);  /* Source Sans Pro for links */
+                                                                font-weight: 500;               /* medium weight for readability */
+                                                                  transition: color 0.3s;         /* smooth color change on hover */
+                                                                  }
+
+                                                                  .nav-links li a:hover {
+                                                                    color: var(--primary-color);    /* changes color when hovered */
+                                                                    }
+
+
+
+                                                                .hero-content button {
+                                                                      background: var(--primary-color);  /* your main red color */
+                                                                        color: #fff;                        /* white text */
+                                                                          border: none;                       /* removes default border */
+                                                                            padding: 12px 30px;                 /* top/bottom 12px, left/right 30px */
+                                                                              font-size: 1rem;                     /* readable size */
+                                                                                cursor: pointer;                     /* shows pointer on hover */
+                                                                                  transition: opacity 0.3s;            /* smooth fade when hovered */
+                                                                                  }
+
+                                                                                  .hero-content button:hover {
+                                                                                    opacity: 0.9;                        /* slight fade effect on hover */
+                                                                                    }
+                                                                
+                                          
+                          
+              
